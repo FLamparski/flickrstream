@@ -1,0 +1,8 @@
+bower_components/
+node_modules/
+dist/
+css/
+coffee/*.js
+*.swp
+Gruntfile.js
+npm_debug.log

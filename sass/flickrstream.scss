@@ -1,0 +1,120 @@
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.app-header {
+  background-color: #f7c60e;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+  min-height: 58px;
+
+  .container {
+    height: 58px;
+  }
+
+  img.logo {
+    max-height: 48px;
+    margin: 5px auto;
+    display: block;
+  }
+
+  .inner {
+    position: absolute;
+    max-width: 800px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 58px;
+
+    .refresh {
+      display: block;
+      margin: 0 0 0 auto;
+      width: 48px;
+      height: 100%;
+      background: transparent;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      svg {
+        path {
+          color: #fff;
+          fill: #fff;
+        }
+
+        &.loading {
+          transform-origin: 46% 50%;
+          animation: loading 0.8s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: #ececec;
+  flex-flow: column;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.photos {
+  flex: 1;
+  overflow-y: scroll;
+  padding-top: 2rem;
+}
+
+.photos > .container {
+
+  article {
+    background-color: #efefef;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+
+    h2 {
+      margin-top: 0;
+
+      span.photo {
+        display: block;
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  * + * {
+    margin-top: 1.5rem;
+  }
+}
